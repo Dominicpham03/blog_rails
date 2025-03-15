@@ -1,0 +1,9 @@
+<button onclick="runCommand()">Run Command</button>
+
+<script>
+  function runCommand() {
+    fetch('/posts/run_command')
+      .then(response => response.json())
+      .then(data => alert('Command Result: ' + data.result));
+  }
+</script>
